@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://br20nqlm8tula"
+path="res://.godot/imported/key-twist-in-lock-47832 (mp3cut.net).mp3-686569f297b622b5b7b38f8870a143ee.mp3str"
+
+[deps]
+
+source_file="res://SFX/key-twist-in-lock-47832 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/key-twist-in-lock-47832 (mp3cut.net).mp3-686569f297b622b5b7b38f8870a143ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

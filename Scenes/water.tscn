@@ -1,0 +1,140 @@
+[gd_scene load_steps=11 format=3 uid="uid://sj4jk04cec8v"]
+
+[ext_resource type="Script" path="res://Scripts/Environment/water.gd" id="1_qlwek"]
+[ext_resource type="PackedScene" uid="uid://crcsjj8w5viax" path="res://Scenes/Dust/splash.tscn" id="2_t7vv3"]
+[ext_resource type="Texture2D" uid="uid://hb6sw70c82hh" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Water/Bottom/1.png" id="3_8d4f2"]
+[ext_resource type="Texture2D" uid="uid://kbdvjc5cuo2e" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/1.png" id="4_r4a4r"]
+[ext_resource type="Texture2D" uid="uid://kdt88x3mnv16" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/2.png" id="5_tns2p"]
+[ext_resource type="Texture2D" uid="uid://dlsufcnegyakf" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/3.png" id="6_lqv6m"]
+[ext_resource type="Texture2D" uid="uid://321vap334hu2" path="res://Treasure Hunters/Merchant Ship/Sprites/Water/Water/Top/4.png" id="7_0i4ep"]
+[ext_resource type="AudioStream" uid="uid://dgkch7ppub8q5" path="res://SFX/water-splash-46402.mp3" id="8_qe3xy"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5iqqm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_r4a4r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tns2p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_lqv6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_0i4ep")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_73mnb"]
+b = Vector2(6032, 0)
+
+[node name="Water" type="Area2D"]
+z_index = 9
+position = Vector2(-576, 96)
+script = ExtResource("1_qlwek")
+_splash = ExtResource("2_t7vv3")
+
+[node name="Bottom" type="Sprite2D" parent="."]
+position = Vector2(768, -54)
+scale = Vector2(12, 3.25)
+texture = ExtResource("3_8d4f2")
+offset = Vector2(-16, 40)
+
+[node name="Surface" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Surface"]
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.415144
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(96, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(288, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(672, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D19" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(1056, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(960, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D12" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(864, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D13" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(768, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(576, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(480, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(384, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Surface"]
+position = Vector2(192, 0)
+sprite_frames = SubResource("SpriteFrames_5iqqm")
+autoplay = "default"
+frame_progress = 0.427662
+offset = Vector2(48, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_73mnb")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_qe3xy")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_sfx_finished"]

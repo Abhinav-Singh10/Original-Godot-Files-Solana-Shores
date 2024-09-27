@@ -1,0 +1,167 @@
+[gd_scene load_steps=13 format=3 uid="uid://omis31o1802j"]
+
+[ext_resource type="Script" path="res://Scripts/Treasure/diamond.gd" id="1_k2mrf"]
+[ext_resource type="Texture2D" uid="uid://c1ktv2ote5b1p" path="res://Treasure Hunters/Pirate Treasure/Sprites/Blue Diamond/01.png" id="2_4gqnx"]
+[ext_resource type="Texture2D" uid="uid://bo6lc86bryb4c" path="res://Treasure Hunters/Pirate Treasure/Sprites/Blue Diamond/02.png" id="3_to7tm"]
+[ext_resource type="Texture2D" uid="uid://ba85n50tm2gij" path="res://Treasure Hunters/Pirate Treasure/Sprites/Blue Diamond/03.png" id="4_rafg3"]
+[ext_resource type="Texture2D" uid="uid://wrd4flsvdscl" path="res://Treasure Hunters/Pirate Treasure/Sprites/Blue Diamond/04.png" id="5_spgok"]
+[ext_resource type="Texture2D" uid="uid://dmn6wqmn0dr4c" path="res://Treasure Hunters/Pirate Treasure/Sprites/Diamond Effect/01.png" id="6_firod"]
+[ext_resource type="Texture2D" uid="uid://gjmfekxmhcit" path="res://Treasure Hunters/Pirate Treasure/Sprites/Diamond Effect/02.png" id="7_akmiv"]
+[ext_resource type="Texture2D" uid="uid://bf85wqkkrnn2n" path="res://Treasure Hunters/Pirate Treasure/Sprites/Diamond Effect/03.png" id="8_3lnft"]
+[ext_resource type="Texture2D" uid="uid://x3bwo4gmlqs7" path="res://Treasure Hunters/Pirate Treasure/Sprites/Diamond Effect/04.png" id="9_solpo"]
+[ext_resource type="AudioStream" uid="uid://cca7blpa5on22" path="res://SFX/Treasures/diamonds.mp3" id="10_5w3pw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qyrgm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4gqnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_to7tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_rafg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_spgok")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_firod")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_akmiv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3lnft")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_solpo")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"effect",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_maiyh"]
+radius = 5.09902
+
+[node name="Blue Diamond" type="RigidBody2D"]
+position = Vector2(209, 76)
+collision_layer = 16777216
+collision_mask = 257
+freeze = true
+freeze_mode = 1
+contact_monitor = true
+max_contacts_reported = 1
+script = ExtResource("1_k2mrf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-20, -18)
+sprite_frames = SubResource("SpriteFrames_qyrgm")
+animation = &"effect"
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-20, -18)
+shape = SubResource("CircleShape2D_maiyh")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_5w3pw")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

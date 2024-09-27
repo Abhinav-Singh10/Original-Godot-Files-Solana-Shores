@@ -1,0 +1,285 @@
+[gd_scene load_steps=33 format=3 uid="uid://dbcvbn34aooyc"]
+
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_2je5o"]
+[ext_resource type="Script" path="res://Scripts/Environment/camera.gd" id="2_o64dq"]
+[ext_resource type="AudioStream" uid="uid://e86nebtc7p6o" path="res://SFX/Death.mp3" id="3_1vh5g"]
+[ext_resource type="PackedScene" uid="uid://di21bjkd5g6km" path="res://Scenes/background.tscn" id="3_wvpk0"]
+[ext_resource type="AudioStream" uid="uid://w6hrmsaalkh4" path="res://SFX/GameOver.mp3" id="4_0276f"]
+[ext_resource type="PackedScene" uid="uid://baogvkbvoh8t2" path="res://Scenes/Characters/roger.tscn" id="4_bp3oh"]
+[ext_resource type="Script" path="res://Scripts/player.gd" id="6_iwqia"]
+[ext_resource type="PackedScene" uid="uid://c3i6pyuosyhky" path="res://Scenes/Levels/level_1-1.tscn" id="7_0366t"]
+[ext_resource type="Script" path="res://Scripts/Ui/counter.gd" id="8_pverf"]
+[ext_resource type="Script" path="res://Scripts/Ui/gauge.gd" id="9_qo7du"]
+[ext_resource type="Texture2D" uid="uid://ctbn0mmdm6aar" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Life Bars/Big Bars/1.png" id="9_tulpx"]
+[ext_resource type="PackedScene" uid="uid://d34dub2ic3mh0" path="res://Scenes/fade.tscn" id="9_ysw3y"]
+[ext_resource type="AudioStream" uid="uid://ci0mweyubrvwh" path="res://SFX/victoryTrack.mp3" id="10_3wsxq"]
+[ext_resource type="Texture2D" uid="uid://bbcsfx6h4tdl8" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Life Bars/Big Bars/3.png" id="10_xxyo2"]
+[ext_resource type="Texture2D" uid="uid://dt46feudw0p5m" path="res://Treasure Hunters/Pirate Treasure/Sprites/Golden Skull/00.png" id="11_8nd0w"]
+[ext_resource type="Texture2D" uid="uid://boh77kj1j0ee3" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Life Bars/Big Bars/4.png" id="11_kieej"]
+[ext_resource type="Texture2D" uid="uid://b446h3b01c5ln" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Life Bars/Colors/1.png" id="12_5q108"]
+[ext_resource type="Texture2D" uid="uid://7idvfg33kxib" path="res://Treasure Hunters/Merchant Ship/Sprites/Chest Key/Idle/1.png" id="12_a0cgb"]
+[ext_resource type="Texture2D" uid="uid://c1ktv2ote5b1p" path="res://Treasure Hunters/Pirate Treasure/Sprites/Blue Diamond/01.png" id="12_h43vn"]
+[ext_resource type="Texture2D" uid="uid://cph41u427v7hg" path="res://Treasure Hunters/Pirate Treasure/Sprites/Green Diamond/01.png" id="13_kad05"]
+[ext_resource type="Texture2D" uid="uid://cappoltcfgyju" path="res://Treasure Hunters/Pirate Treasure/Sprites/Red Diamond/01.png" id="14_dcnki"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pvtvx"]
+load_path = "res://.godot/imported/36.png-782e844fd2242977388d66aa8a604ee6.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_a2a8e"]
+load_path = "res://.godot/imported/27.png-55df8fcfd3688deada08731339bf773b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_xacy6"]
+load_path = "res://.godot/imported/28.png-9badf6077c9cdae1c0a5e692a1b82a1b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5hxue"]
+load_path = "res://.godot/imported/29.png-47e8294517a957d60a6c86d3b971c42e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_u4ysm"]
+load_path = "res://.godot/imported/30.png-452f61f8660d3489e40603c6f8094195.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_upfxq"]
+load_path = "res://.godot/imported/31.png-44a3dadca39526da68c9b24706aacc32.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ucgyl"]
+load_path = "res://.godot/imported/32.png-3549c4d7165a7832f0fa95d05bd5c656.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fy0p8"]
+load_path = "res://.godot/imported/33.png-d2f232aadbedb6ef60cb621291366422.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m20o6"]
+load_path = "res://.godot/imported/34.png-7bb1367adf0ae95f00303fe0cce46395.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ymefs"]
+load_path = "res://.godot/imported/35.png-e3e494f0b2859c5a3efb64827307a354.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6wwml"]
+load_path = "res://.godot/imported/01.png-b2afecb93641f877b51306fcff2d8152.ctex"
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_2je5o")
+_victory = ExtResource("10_3wsxq")
+_death = ExtResource("3_1vh5g")
+_gameover = ExtResource("4_0276f")
+
+[node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("_subject")]
+position = Vector2(32, -32)
+zoom = Vector2(3, 3)
+script = ExtResource("2_o64dq")
+_subject = NodePath("../Roger")
+_offset = Vector2(64, -32)
+_look_ahead_duration = 2.0
+_look_ahead_trans_type = 1
+_look_ahead_ease_type = 2
+_floor_height_trans_type = 1
+_floor_height_ease_type = 1
+
+[node name="BackGround" parent="Camera2D" instance=ExtResource("3_wvpk0")]
+z_index = -1
+
+[node name="Roger" parent="." instance=ExtResource("4_bp3oh")]
+position = Vector2(-329, -116)
+collision_mask = 65537
+_speed = 5.0
+_acceleration = 10.0
+_deceleration = 20.0
+
+[node name="Player" type="Node" parent="Roger"]
+script = ExtResource("6_iwqia")
+
+[node name="Level" parent="." instance=ExtResource("7_0366t")]
+
+[node name="UserInterface" type="CanvasLayer" parent="."]
+
+[node name="CoinCounter" type="HBoxContainer" parent="UserInterface"]
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 72.0
+offset_bottom = 72.0
+scale = Vector2(2, 2)
+script = ExtResource("8_pverf")
+_digits = Array[Texture2D]([SubResource("CompressedTexture2D_pvtvx"), SubResource("CompressedTexture2D_a2a8e"), SubResource("CompressedTexture2D_xacy6"), SubResource("CompressedTexture2D_5hxue"), SubResource("CompressedTexture2D_u4ysm"), SubResource("CompressedTexture2D_upfxq"), SubResource("CompressedTexture2D_ucgyl"), SubResource("CompressedTexture2D_fy0p8"), SubResource("CompressedTexture2D_m20o6"), SubResource("CompressedTexture2D_ymefs")])
+
+[node name="icon" type="TextureRect" parent="UserInterface/CoinCounter"]
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_6wwml")
+expand_mode = 3
+
+[node name="Tens" type="TextureRect" parent="UserInterface/CoinCounter"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_pvtvx")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Ones" type="TextureRect" parent="UserInterface/CoinCounter"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_pvtvx")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="LivesCounter" type="HBoxContainer" parent="UserInterface"]
+layout_direction = 3
+offset_left = 96.0
+offset_top = 32.0
+offset_right = 164.0
+offset_bottom = 72.0
+scale = Vector2(2, 2)
+script = ExtResource("8_pverf")
+_digits = Array[Texture2D]([SubResource("CompressedTexture2D_pvtvx"), SubResource("CompressedTexture2D_a2a8e"), SubResource("CompressedTexture2D_xacy6"), SubResource("CompressedTexture2D_5hxue"), SubResource("CompressedTexture2D_u4ysm"), SubResource("CompressedTexture2D_upfxq"), SubResource("CompressedTexture2D_ucgyl"), SubResource("CompressedTexture2D_fy0p8"), SubResource("CompressedTexture2D_m20o6"), SubResource("CompressedTexture2D_ymefs")])
+
+[node name="icon" type="TextureRect" parent="UserInterface/LivesCounter"]
+layout_mode = 2
+texture = ExtResource("11_8nd0w")
+expand_mode = 3
+
+[node name="Ones" type="TextureRect" parent="UserInterface/LivesCounter"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_pvtvx")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="Tens" type="TextureRect" parent="UserInterface/LivesCounter"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+texture = SubResource("CompressedTexture2D_pvtvx")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="KeyIcon" type="TextureRect" parent="UserInterface"]
+visible = false
+offset_left = 36.0
+offset_top = 99.0
+offset_right = 76.0
+offset_bottom = 139.0
+scale = Vector2(2, 2)
+texture = ExtResource("12_a0cgb")
+
+[node name="BlueDiamond" type="TextureRect" parent="UserInterface"]
+visible = false
+offset_left = 96.0
+offset_top = 96.0
+offset_right = 136.0
+offset_bottom = 136.0
+scale = Vector2(2, 2)
+texture = ExtResource("12_h43vn")
+
+[node name="RedDiamond" type="TextureRect" parent="UserInterface"]
+visible = false
+offset_left = 224.0
+offset_top = 96.0
+offset_right = 264.0
+offset_bottom = 136.0
+scale = Vector2(2, 2)
+texture = ExtResource("13_kad05")
+
+[node name="GreenDiamond" type="TextureRect" parent="UserInterface"]
+visible = false
+offset_left = 160.0
+offset_top = 96.0
+offset_right = 200.0
+offset_bottom = 136.0
+scale = Vector2(2, 2)
+texture = ExtResource("14_dcnki")
+
+[node name="HealthGauge" type="Control" parent="UserInterface"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -40.0
+offset_right = 72.0
+grow_vertical = 0
+scale = Vector2(4, 4)
+pivot_offset = Vector2(0, 40)
+script = ExtResource("9_qo7du")
+
+[node name="Background" type="HBoxContainer" parent="UserInterface/HealthGauge"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/HealthGauge/Background"]
+layout_mode = 2
+texture = ExtResource("9_tulpx")
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="UserInterface/HealthGauge/Background"]
+layout_mode = 2
+texture = ExtResource("10_xxyo2")
+stretch_mode = 4
+
+[node name="TextureRect3" type="TextureRect" parent="UserInterface/HealthGauge/Background"]
+layout_mode = 2
+texture = ExtResource("11_kieej")
+stretch_mode = 4
+
+[node name="Fill" type="TextureRect" parent="UserInterface/HealthGauge"]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 13.75
+offset_right = 92.0
+offset_bottom = 15.75
+texture = ExtResource("12_5q108")
+expand_mode = 1
+
+[node name="GameOverMenu" type="Control" parent="UserInterface"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UserInterface/GameOverMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -46.5
+offset_right = 43.5
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="UserInterface/GameOverMenu/VBoxContainer"]
+layout_mode = 2
+text = "Game Over"
+
+[node name="Retry" type="Button" parent="UserInterface/GameOverMenu/VBoxContainer"]
+layout_mode = 2
+text = "Retry"
+
+[node name="Exit" type="Button" parent="UserInterface/GameOverMenu/VBoxContainer"]
+layout_mode = 2
+text = "Exit"
+
+[node name="Fade" parent="UserInterface" instance=ExtResource("9_ysw3y")]
+
+[node name="Fanfare" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_3wsxq")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+autostart = true
+
+[connection signal="changed_direction" from="Roger" to="Camera2D" method="_on_subject_changed_direction"]
+[connection signal="died" from="Roger" to="." method="_on_player_died"]
+[connection signal="health_changed" from="Roger" to="UserInterface/HealthGauge" method="set_value"]
+[connection signal="landed" from="Roger" to="Camera2D" method="_on_subject_landed"]
+[connection signal="pressed" from="UserInterface/GameOverMenu/VBoxContainer/Retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="UserInterface/GameOverMenu/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

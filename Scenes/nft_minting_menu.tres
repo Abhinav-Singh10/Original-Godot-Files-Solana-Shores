@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://cl517pv8cif5k"]
+
+[ext_resource type="Texture2D" uid="uid://d21tiyaavmfbk" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/2.png" id="1_n1r82"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gdctx"]
+texture = ExtResource("1_n1r82")
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_gdctx")

@@ -1,0 +1,212 @@
+[gd_scene load_steps=23 format=3 uid="uid://di21bjkd5g6km"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2shua"]
+load_path = "res://.godot/imported/Additional Sky.png-b1d5f9a2fc5bcba493a0b45fa5c101c5.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4yve7"]
+load_path = "res://.godot/imported/Additional Water.png-3a8a3ed5bd2112bb294f1a4dc2e2c6eb.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ffw2h"]
+load_path = "res://.godot/imported/BG Image.png-4cfafa41b3f6242be6889fa1e8f2e23c.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_7vod7"]
+load_path = "res://.godot/imported/Water Reflect Big 01.png-9de3ed4d40a018cdb412e0b36564933b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0oynr"]
+load_path = "res://.godot/imported/Water Reflect Big 02.png-779151ec862758ca0f92c425bd1371ba.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h3e1v"]
+load_path = "res://.godot/imported/Water Reflect Big 03.png-dd260ce5994ba65d93439aff4da5b80b.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_36v3i"]
+load_path = "res://.godot/imported/Water Reflect Big 04.png-243279c818427b40f098e1a4e5b5c3f5.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6vtv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_7vod7")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_0oynr")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_h3e1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_36v3i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oyt8h"]
+load_path = "res://.godot/imported/Water Reflect Medium 01.png-06733519be724ead9364947e8e8722ef.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_c7vcm"]
+load_path = "res://.godot/imported/Water Reflect Medium 02.png-57a47553a0ac6bfa6127fface8d45c07.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_6wrg4"]
+load_path = "res://.godot/imported/Water Reflect Medium 03.png-0002533aefb3ac6ef1f213ebbe09c5f7.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_otour"]
+load_path = "res://.godot/imported/Water Reflect Medium 04.png-7fb4733a298d84117f0d87df766323eb.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_36tut"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_oyt8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_c7vcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_6wrg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_otour")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_p27s1"]
+load_path = "res://.godot/imported/Water Reflect Small 01.png-cd8f68f23ae94336d13461dcae5df865.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m7apq"]
+load_path = "res://.godot/imported/Water Reflect Small 02.png-a69ac415629bab4a19f7f37035dfc233.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_myubw"]
+load_path = "res://.godot/imported/Water Reflect Small 03.png-e0179ecd3746ec79a28a743429619fa3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lvqf0"]
+load_path = "res://.godot/imported/Water Reflect Small 04.png-ccdbb71e43d803cab92d648760ab7d4f.ctex"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ow2ua"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_p27s1")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_m7apq")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_myubw")
+}, {
+"duration": 1.0,
+"texture": SubResource("CompressedTexture2D_lvqf0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_25pyq"]
+load_path = "res://.godot/imported/Small Cloud 1.png-ad7a7934c494090ff5bf4e5ad06b672f.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wfu2w"]
+load_path = "res://.godot/imported/Small Cloud 2.png-ecc28a87ab583f3b1b4f233a7cc4c94e.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_igf54"]
+load_path = "res://.godot/imported/Small Cloud 3.png-0508aa5a0deb4a3017ca2b047cfd87a9.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_1f5c3"]
+load_path = "res://.godot/imported/Big Clouds.png-884e91f962abef06906ee1e34b877a24.ctex"
+
+[node name="BackGround" type="Parallax2D"]
+ignore_camera_scroll = true
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+ignore_camera_scroll = true
+
+[node name="AdditionalSky" type="Sprite2D" parent="Parallax2D"]
+texture_filter = 1
+position = Vector2(-28, -116)
+scale = Vector2(30.75, 3.25)
+texture = SubResource("CompressedTexture2D_2shua")
+
+[node name="AdditionalWater" type="Sprite2D" parent="Parallax2D"]
+texture_filter = 1
+position = Vector2(-24, 128)
+scale = Vector2(30.5, 4)
+texture = SubResource("CompressedTexture2D_4yve7")
+
+[node name="BgImage" type="Sprite2D" parent="Parallax2D"]
+texture_filter = 1
+position = Vector2(-24, 0)
+scale = Vector2(2.54167, 1)
+texture = SubResource("CompressedTexture2D_ffw2h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Parallax2D"]
+texture_filter = 1
+position = Vector2(0, 40)
+scale = Vector2(1.6, 1.874)
+sprite_frames = SubResource("SpriteFrames_f6vtv")
+autoplay = "default"
+frame_progress = 0.76787
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Parallax2D"]
+texture_filter = 1
+position = Vector2(0, 56)
+scale = Vector2(1.6, 1.6)
+sprite_frames = SubResource("SpriteFrames_36tut")
+autoplay = "default"
+frame_progress = 0.33616
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Parallax2D"]
+texture_filter = 1
+position = Vector2(0, 64)
+scale = Vector2(1.6, 1.6)
+sprite_frames = SubResource("SpriteFrames_ow2ua")
+autoplay = "default"
+frame_progress = 0.837848
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+repeat_size = Vector2(448, 0)
+autoscroll = Vector2(-3, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="Small Cloud 1" type="Sprite2D" parent="Parallax2D2"]
+texture_filter = 1
+position = Vector2(-144, -128)
+texture = SubResource("CompressedTexture2D_25pyq")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+repeat_size = Vector2(448, 0)
+autoscroll = Vector2(-11, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="Small Cloud 2" type="Sprite2D" parent="Parallax2D3"]
+texture_filter = 1
+position = Vector2(112, -120)
+texture = SubResource("CompressedTexture2D_wfu2w")
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+scroll_offset = Vector2(0, 32)
+repeat_size = Vector2(448, 0)
+autoscroll = Vector2(-19, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="Small Cloud 3" type="Sprite2D" parent="Parallax2D4"]
+texture_filter = 1
+position = Vector2(-32, -104)
+texture = SubResource("CompressedTexture2D_igf54")
+
+[node name="Parallax2D5" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-232, -48)
+repeat_size = Vector2(448, 0)
+autoscroll = Vector2(-37, 0)
+repeat_times = 2
+ignore_camera_scroll = true
+
+[node name="Big Clouds" type="Sprite2D" parent="Parallax2D5"]
+texture_filter = 1
+position = Vector2(285.29, 24)
+texture = SubResource("CompressedTexture2D_1f5c3")

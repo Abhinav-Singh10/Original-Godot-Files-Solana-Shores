@@ -1,0 +1,520 @@
+[gd_scene load_steps=40 format=4 uid="uid://crkl72ahyxadt"]
+
+[ext_resource type="PackedScene" uid="uid://di21bjkd5g6km" path="res://Scenes/background.tscn" id="1_4xmow"]
+[ext_resource type="Script" path="res://Scripts/Ui/nft_minting_menu.gd" id="1_jvf6p"]
+[ext_resource type="Texture2D" uid="uid://b75cjo2dwheho" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 01.png" id="2_72jh4"]
+[ext_resource type="Texture2D" uid="uid://k0a4trjypvrc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 02.png" id="3_xft88"]
+[ext_resource type="Texture2D" uid="uid://c5xaojeqf55xr" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 03.png" id="4_dn0cs"]
+[ext_resource type="Texture2D" uid="uid://y83f6csjesop" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 04.png" id="5_jp0r5"]
+[ext_resource type="Texture2D" uid="uid://c0cxq1arbxnjc" path="res://Treasure Hunters/Captain Clown Nose/Sprites/Captain Clown Nose/Captain Clown Nose without Sword/01-Idle/Idle 05.png" id="6_pypxm"]
+[ext_resource type="Texture2D" uid="uid://bwfmnsq56orar" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 01.png" id="7_by87w"]
+[ext_resource type="Texture2D" uid="uid://c6ypb27e2whfq" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 02.png" id="8_q38jf"]
+[ext_resource type="Texture2D" uid="uid://bk5erk8y6bhty" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 03.png" id="9_urj6m"]
+[ext_resource type="Texture2D" uid="uid://k52pcplceyl1" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 04.png" id="10_0seih"]
+[ext_resource type="Texture2D" uid="uid://hihd7wia0uc1" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 05.png" id="11_rtqb2"]
+[ext_resource type="Texture2D" uid="uid://cykq7f1exubgo" path="res://Treasure Hunters/Palm Tree Island/Sprites/Objects/Ship Helm/Ship Helm Idle 06.png" id="12_cl4tm"]
+[ext_resource type="PackedScene" uid="uid://d34dub2ic3mh0" path="res://Scenes/fade.tscn" id="13_ge7ae"]
+[ext_resource type="Texture2D" uid="uid://d21tiyaavmfbk" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/2.png" id="14_eg1w5"]
+[ext_resource type="Texture2D" uid="uid://cbfgc08tf06l2" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Small Text/Small Text/Terrain and Back Wall (32x32).png" id="14_iug3p"]
+[ext_resource type="Theme" uid="uid://c7a0le4youuh3" path="res://Scenes/Theme.tres" id="15_gu0bc"]
+[ext_resource type="Theme" uid="uid://cl517pv8cif5k" path="res://Scenes/nft_minting_menu.tres" id="15_p3yha"]
+[ext_resource type="Texture2D" uid="uid://bd3x31k7xx8kw" path="res://NFTs/EarlyPlayers.png" id="16_3nv7j"]
+[ext_resource type="Texture2D" uid="uid://bq816sd42kmtu" path="res://NFTs/placeholder.png" id="16_ryli3"]
+[ext_resource type="Texture2D" uid="uid://dwp6218d1abe2" path="res://NFTs/allCoinsCollected.png" id="17_mkh0v"]
+[ext_resource type="Texture2D" uid="uid://5iu3jsu238j" path="res://NFTs/Completionist.png" id="18_cedxk"]
+[ext_resource type="Texture2D" uid="uid://c0v2nhkqgsog6" path="res://NFTs/Speedrunners.png" id="19_r7cbk"]
+[ext_resource type="Texture2D" uid="uid://rjxq6yd3mgb0" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Small Text/Small Icons/1.png" id="22_lhtd6"]
+[ext_resource type="Texture2D" uid="uid://icpsaikfy5hu" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Prefabs/12.png" id="23_lpxed"]
+[ext_resource type="Texture2D" uid="uid://hkgqeok7yhpg" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Small Text/Small Text/18.png" id="24_xqgmp"]
+[ext_resource type="Texture2D" uid="uid://bquanxqxwuunj" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Small Text/Small Text/5.png" id="25_iq0ti"]
+[ext_resource type="Texture2D" uid="uid://dko3diu2b2mrk" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Small Text/Small Text/20.png" id="26_cy2jh"]
+[ext_resource type="Texture2D" uid="uid://cu5gjs8yx0oo6" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Small Text/Small Text/21.png" id="27_xf1j5"]
+[ext_resource type="Texture2D" uid="uid://dk4btc6p4455w" path="res://Treasure Hunters/Wood and Paper UI/Sprites/Small Text/Small Text/14.png" id="28_sl4cv"]
+[ext_resource type="PackedScene" uid="uid://blmw46he11fxs" path="res://addons/SolanaSDK/Scripts/TransactionManager/TransactionOverlayUI.tscn" id="30_qg72x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_58wt0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_72jh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xft88")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dn0cs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jp0r5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_pypxm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q66l0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_by87w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_q38jf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_urj6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0seih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_rtqb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_cl4tm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_osp0t"]
+texture = ExtResource("14_eg1w5")
+
+[sub_resource type="Theme" id="Theme_07ndr"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_osp0t")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8x7ma"]
+texture = ExtResource("23_lpxed")
+
+[sub_resource type="Theme" id="Theme_iglnd"]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_8x7ma")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sdnyf"]
+texture = ExtResource("14_iug3p")
+texture_region_size = Vector2i(32, 32)
+1:1/0 = 0
+1:1/0/terrain_set = 0
+1:1/0/terrains_peering_bit/bottom_side = 0
+1:1/0/terrains_peering_bit/bottom_left_corner = 0
+1:1/0/terrains_peering_bit/left_side = 0
+2:1/0 = 0
+2:1/0/terrain_set = 0
+2:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0 = 0
+3:1/0/terrain_set = 0
+3:1/0/terrain = 0
+3:1/0/terrains_peering_bit/right_side = 0
+3:1/0/terrains_peering_bit/bottom_right_corner = 0
+3:1/0/terrains_peering_bit/bottom_side = 0
+3:1/0/terrains_peering_bit/bottom_left_corner = 0
+3:1/0/terrains_peering_bit/left_side = 0
+5:1/0 = 0
+5:1/0/terrain_set = 0
+7:1/0 = 0
+8:1/0 = 0
+10:1/0 = 0
+11:1/0 = 0
+13:1/0 = 0
+14:1/0 = 0
+16:1/0 = 0
+1:2/0 = 0
+1:2/0/terrain_set = 0
+1:2/0/terrain = 0
+1:2/0/terrains_peering_bit/right_side = 0
+1:2/0/terrains_peering_bit/bottom_right_corner = 0
+1:2/0/terrains_peering_bit/bottom_side = 0
+1:2/0/terrains_peering_bit/bottom_left_corner = 0
+1:2/0/terrains_peering_bit/left_side = 0
+1:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0 = 0
+2:2/0/terrain_set = 0
+2:2/0/terrain = 0
+2:2/0/terrains_peering_bit/right_side = 0
+2:2/0/terrains_peering_bit/bottom_right_corner = 0
+2:2/0/terrains_peering_bit/bottom_side = 0
+2:2/0/terrains_peering_bit/bottom_left_corner = 0
+2:2/0/terrains_peering_bit/left_side = 0
+2:2/0/terrains_peering_bit/top_left_corner = 0
+2:2/0/terrains_peering_bit/top_side = 0
+2:2/0/terrains_peering_bit/top_right_corner = 0
+3:2/0 = 0
+3:2/0/terrain_set = 0
+3:2/0/terrain = 0
+3:2/0/terrains_peering_bit/right_side = 0
+3:2/0/terrains_peering_bit/bottom_right_corner = 0
+3:2/0/terrains_peering_bit/bottom_side = 0
+3:2/0/terrains_peering_bit/bottom_left_corner = 0
+3:2/0/terrains_peering_bit/left_side = 0
+3:2/0/terrains_peering_bit/top_left_corner = 0
+3:2/0/terrains_peering_bit/top_side = 0
+3:2/0/terrains_peering_bit/top_right_corner = 0
+5:2/0 = 0
+7:2/0 = 0
+8:2/0 = 0
+10:2/0 = 0
+11:2/0 = 0
+13:2/0 = 0
+14:2/0 = 0
+16:2/0 = 0
+17:2/0 = 0
+1:3/0 = 0
+1:3/0/terrain_set = 0
+1:3/0/terrain = 0
+1:3/0/terrains_peering_bit/right_side = 0
+1:3/0/terrains_peering_bit/left_side = 0
+1:3/0/terrains_peering_bit/top_left_corner = 0
+1:3/0/terrains_peering_bit/top_side = 0
+1:3/0/terrains_peering_bit/top_right_corner = 0
+2:3/0 = 0
+2:3/0/terrain_set = 0
+2:3/0/terrain = 0
+2:3/0/terrains_peering_bit/right_side = 0
+2:3/0/terrains_peering_bit/left_side = 0
+2:3/0/terrains_peering_bit/top_left_corner = 0
+2:3/0/terrains_peering_bit/top_side = 0
+2:3/0/terrains_peering_bit/top_right_corner = 0
+3:3/0 = 0
+3:3/0/terrain_set = 0
+3:3/0/terrain = 0
+3:3/0/terrains_peering_bit/right_side = 0
+3:3/0/terrains_peering_bit/left_side = 0
+3:3/0/terrains_peering_bit/top_left_corner = 0
+3:3/0/terrains_peering_bit/top_side = 0
+3:3/0/terrains_peering_bit/top_right_corner = 0
+5:3/0 = 0
+7:4/0 = 0
+8:4/0 = 0
+10:4/0 = 0
+11:4/0 = 0
+13:4/0 = 0
+14:4/0 = 0
+16:4/0 = 0
+17:4/0 = 0
+1:5/0 = 0
+1:5/0/terrain_set = 0
+2:5/0 = 0
+3:5/0 = 0
+5:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+10:5/0 = 0
+11:5/0 = 0
+13:5/0 = 0
+14:5/0 = 0
+16:5/0 = 0
+17:5/0 = 0
+1:7/0 = 0
+2:7/0 = 0
+3:7/0 = 0
+5:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+10:7/0 = 0
+11:7/0 = 0
+13:7/0 = 0
+14:7/0 = 0
+16:7/0 = 0
+1:8/0 = 0
+2:8/0 = 0
+3:8/0 = 0
+5:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+10:8/0 = 0
+11:8/0 = 0
+13:8/0 = 0
+14:8/0 = 0
+16:8/0 = 0
+17:8/0 = 0
+1:9/0 = 0
+2:9/0 = 0
+3:9/0 = 0
+5:9/0 = 0
+7:10/0 = 0
+8:10/0 = 0
+10:10/0 = 0
+11:10/0 = 0
+13:10/0 = 0
+14:10/0 = 0
+16:10/0 = 0
+17:10/0 = 0
+1:11/0 = 0
+2:11/0 = 0
+3:11/0 = 0
+5:11/0 = 0
+7:11/0 = 0
+8:11/0 = 0
+10:11/0 = 0
+11:11/0 = 0
+13:11/0 = 0
+14:11/0 = 0
+16:11/0 = 0
+17:11/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_f6dv1"]
+tile_size = Vector2i(32, 32)
+terrain_set_0/mode = 0
+terrain_set_0/terrain_0/name = "Ship"
+terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
+sources/0 = SubResource("TileSetAtlasSource_sdnyf")
+
+[node name="NFT Minting Menu" type="Node2D"]
+script = ExtResource("1_jvf6p")
+early_CM_id = "DbpkCEAPtnPNmeougYuwLAvjv1vrDYSa2TDtpyj81CcY"
+allCoins_CM_id = "EWea7YTH5vzhXtxhwfaefxixxhUASEDzSG7B7ekutBNT"
+completion_CM_id = "4HtKE1HpPbaKhhkuPew69BxchtHoW8FHngvf1Hwu9HcM"
+SpeedRun_CM_id = "DK6XUQTiQostbMxXPXY2yJ5TzgyZJHuy2tNk8rvikqdA"
+pacifist_CM_id = "685i4sJpNrQk4auetRcLv6ttCwG5EcwqkqUCEQgJcuhA"
+brawler_CM_id = "8Faiu6WVJ87pkMxHES24UGM9gPuFTKfME3Kz35jTdyQC"
+
+[node name="BackGround" parent="." instance=ExtResource("1_4xmow")]
+scale = Vector2(3, 3)
+scroll_offset = Vector2(687, 542)
+
+[node name="Roger" type="AnimatedSprite2D" parent="."]
+position = Vector2(255, 346)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_58wt0")
+autoplay = "default"
+frame_progress = 0.803572
+
+[node name="Helm" type="AnimatedSprite2D" parent="."]
+position = Vector2(337, 334)
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_q66l0")
+autoplay = "default"
+frame_progress = 0.804035
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CanvasLayer"]
+offset_left = 481.0
+offset_top = 84.0
+offset_right = 1315.0
+offset_bottom = 600.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_07ndr")
+theme_override_constants/separation = 33
+
+[node name="EarlyPanel" type="PanelContainer" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+theme = ExtResource("15_p3yha")
+
+[node name="Control2" type="Control" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer/EarlyPanel"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer/EarlyPanel/Control2"]
+custom_minimum_size = Vector2(173, 173)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 38.0
+offset_right = 218.0
+offset_bottom = 219.0
+icon = ExtResource("16_3nv7j")
+
+[node name="AllCoinsPanel" type="PanelContainer" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+theme = ExtResource("15_p3yha")
+
+[node name="Control3" type="Control" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer/AllCoinsPanel"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer/AllCoinsPanel/Control3"]
+custom_minimum_size = Vector2(173, 173)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 38.0
+offset_right = 218.0
+offset_bottom = 219.0
+icon = ExtResource("17_mkh0v")
+
+[node name="CompelitonPanel" type="PanelContainer" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+theme = ExtResource("15_p3yha")
+
+[node name="Control4" type="Control" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer/CompelitonPanel"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer/CompelitonPanel/Control4"]
+custom_minimum_size = Vector2(173, 173)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 38.0
+offset_right = 218.0
+offset_bottom = 219.0
+icon = ExtResource("18_cedxk")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+size_flags_horizontal = 4
+theme = SubResource("Theme_07ndr")
+theme_override_constants/separation = 33
+
+[node name="Speedpanel" type="PanelContainer" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+theme = ExtResource("15_p3yha")
+
+[node name="Control" type="Control" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer2/Speedpanel"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer2/Speedpanel/Control"]
+custom_minimum_size = Vector2(173, 173)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 38.0
+offset_right = 218.0
+offset_bottom = 219.0
+icon = ExtResource("19_r7cbk")
+
+[node name="PacifistPanel" type="PanelContainer" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer2/PacifistPanel"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer2/PacifistPanel/Control2"]
+custom_minimum_size = Vector2(173, 173)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 38.0
+offset_right = 218.0
+offset_bottom = 219.0
+icon = ExtResource("16_ryli3")
+
+[node name="BrawlerPanel" type="PanelContainer" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer2"]
+visible = false
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
+[node name="Control2" type="Control" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer2/BrawlerPanel"]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="Control/CanvasLayer/VBoxContainer/HBoxContainer2/BrawlerPanel/Control2"]
+custom_minimum_size = Vector2(173, 173)
+layout_mode = 0
+offset_left = 37.0
+offset_top = 38.0
+offset_right = 218.0
+offset_bottom = 219.0
+icon = ExtResource("16_ryli3")
+
+[node name="Control" type="Control" parent="Control/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 56.0
+offset_top = 460.0
+offset_right = 322.0
+offset_bottom = 686.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 16.0
+offset_right = 292.0
+offset_bottom = 225.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/CanvasLayer/Control/VBoxContainer"]
+custom_minimum_size = Vector2(276, 190)
+layout_mode = 2
+theme = SubResource("Theme_iglnd")
+
+[node name="Return" type="Control" parent="Control/CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 46.0
+offset_top = 13.0
+offset_right = 395.0
+offset_bottom = 227.0
+
+[node name="Guide" type="PanelContainer" parent="Control/CanvasLayer/Return"]
+layout_mode = 0
+offset_left = 48.0
+offset_top = 90.0
+offset_right = 312.0
+offset_bottom = 182.0
+theme = ExtResource("15_gu0bc")
+
+[node name="Panel" type="Panel" parent="Control/CanvasLayer/Return/Guide"]
+layout_mode = 2
+theme = ExtResource("15_gu0bc")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/CanvasLayer/Return/Guide/Panel"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 10.0
+offset_right = 163.0
+offset_bottom = 30.0
+scale = Vector2(2, 2)
+theme_override_constants/separation = 21
+
+[node name="Return" type="Button" parent="Control/CanvasLayer/Return/Guide/Panel/HBoxContainer"]
+layout_mode = 2
+icon = ExtResource("22_lhtd6")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/CanvasLayer/Return/Guide/Panel/HBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control/CanvasLayer/Return/Guide/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("24_xqgmp")
+
+[node name="TextureRect2" type="TextureRect" parent="Control/CanvasLayer/Return/Guide/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("25_iq0ti")
+
+[node name="TextureRect3" type="TextureRect" parent="Control/CanvasLayer/Return/Guide/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("26_cy2jh")
+
+[node name="TextureRect4" type="TextureRect" parent="Control/CanvasLayer/Return/Guide/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("27_xf1j5")
+
+[node name="TextureRect5" type="TextureRect" parent="Control/CanvasLayer/Return/Guide/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("24_xqgmp")
+
+[node name="TextureRect6" type="TextureRect" parent="Control/CanvasLayer/Return/Guide/Panel/HBoxContainer/HBoxContainer"]
+layout_mode = 2
+texture = ExtResource("28_sl4cv")
+
+[node name="Fade" parent="Control/CanvasLayer" instance=ExtResource("13_ge7ae")]
+
+[node name="TransactionOverlayUI" parent="Control" instance=ExtResource("30_qg72x")]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAYAAAABAAUAAAABAAYAAAACAAUAAAACAAYAAAACAAUAAAADAAYAAAACAAUAAAAEAAYAAAADAAUAAAAFAAYAAAACAAUAAAAGAAYAAAARAAQAAAAGAAcAAAAFAAIAAAAGAAgAAAAFAAIAAAAGAAkAAAAFAAIAAAAAAAsAAAABAAUAAAABAAsAAAACAAUAAAACAAsAAAACAAUAAAADAAsAAAACAAUAAAAEAAsAAAACAAUAAAAFAAsAAAACAAUAAAAGAAsAAAAFAAMAAAAHAAsAAAACAAUAAAAIAAsAAAACAAUAAAAJAAsAAAACAAUAAAAKAAsAAAACAAUAAAALAAsAAAACAAUAAAAMAAsAAAACAAUAAAANAAsAAAACAAUAAAAOAAsAAAACAAUAAAAPAAsAAAACAAUAAAAQAAsAAAACAAUAAAARAAsAAAACAAUAAAASAAsAAAACAAUAAAATAAsAAAACAAUAAAAUAAsAAAADAAUAAAAGAAoAAAAFAAIAAAAAAAcAAAABAAcAAAABAAcAAAACAAcAAAACAAcAAAACAAcAAAADAAcAAAACAAcAAAAEAAcAAAACAAcAAAAFAAcAAAADAAcAAAAAAAgAAAABAAgAAAAAAAkAAAABAAgAAAAAAAoAAAABAAkAAAABAAoAAAACAAkAAAACAAoAAAACAAkAAAADAAoAAAACAAkAAAAEAAoAAAACAAkAAAAFAAoAAAADAAkAAAAFAAgAAAADAAgAAAAFAAkAAAADAAgAAAABAAgAAAACAAgAAAABAAkAAAACAAgAAAACAAgAAAACAAgAAAACAAkAAAACAAgAAAADAAkAAAACAAgAAAADAAgAAAACAAgAAAAEAAgAAAACAAgAAAAEAAkAAAACAAgAAAA=")
+tile_set = SubResource("TileSet_f6dv1")
+
+[connection signal="pressed" from="Control/CanvasLayer/VBoxContainer/HBoxContainer/EarlyPanel/Control2/Button" to="." method="_on_early_button_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/VBoxContainer/HBoxContainer/AllCoinsPanel/Control3/Button" to="." method="_on_coin_button_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/VBoxContainer/HBoxContainer/CompelitonPanel/Control4/Button" to="." method="_on_completion_button_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/VBoxContainer/HBoxContainer2/Speedpanel/Control/Button" to="." method="_on_speed_button_pressed"]
+[connection signal="pressed" from="Control/CanvasLayer/Return/Guide/Panel/HBoxContainer/Return" to="." method="_on_return_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1s4r2n4uuqu5"
+path="res://.godot/imported/impact-6291 (mp3cut.net).mp3-4e379d52e0f86d01fcab0910050c40ae.mp3str"
+
+[deps]
+
+source_file="res://SFX/impact-6291 (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/impact-6291 (mp3cut.net).mp3-4e379d52e0f86d01fcab0910050c40ae.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

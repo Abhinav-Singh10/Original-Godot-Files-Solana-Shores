@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://4c06xev8ng7r"
+path="res://.godot/imported/ChestOpenSimple (mp3cut.net).mp3-c132b21045ef8c8ccb487e2f7add09b5.mp3str"
+
+[deps]
+
+source_file="res://SFX/ChestOpenSimple (mp3cut.net).mp3"
+dest_files=["res://.godot/imported/ChestOpenSimple (mp3cut.net).mp3-c132b21045ef8c8ccb487e2f7add09b5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

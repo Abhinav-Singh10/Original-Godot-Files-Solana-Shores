@@ -1,0 +1,113 @@
+[gd_scene load_steps=18 format=3 uid="uid://c0t5i5qdt5gbx"]
+
+[ext_resource type="Script" path="res://Scripts/Treasure/skull.gd" id="1_j6yfh"]
+[ext_resource type="Texture2D" uid="uid://tnh8ngn8twpi" path="res://Treasure Hunters/Pirate Treasure/Sprites/Golden Skull/01.png" id="1_o72nb"]
+[ext_resource type="Texture2D" uid="uid://cg770lwm1cunh" path="res://Treasure Hunters/Pirate Treasure/Sprites/Golden Skull/02.png" id="2_mqkm3"]
+[ext_resource type="Texture2D" uid="uid://ikxm8am2hubb" path="res://Treasure Hunters/Pirate Treasure/Sprites/Golden Skull/03.png" id="3_6ne58"]
+[ext_resource type="Texture2D" uid="uid://b7k0dn2l7svv8" path="res://Treasure Hunters/Pirate Treasure/Sprites/Golden Skull/04.png" id="4_4f6dk"]
+[ext_resource type="Texture2D" uid="uid://c3ip7qm7wjqa2" path="res://Treasure Hunters/Pirate Treasure/Sprites/Golden Skull/05.png" id="5_8u1ce"]
+[ext_resource type="Texture2D" uid="uid://bpnk1vti5hwev" path="res://Treasure Hunters/Pirate Treasure/Sprites/Golden Skull/06.png" id="6_4fxav"]
+[ext_resource type="Texture2D" uid="uid://dmbyngspds528" path="res://Treasure Hunters/Pirate Treasure/Sprites/Golden Skull/07.png" id="7_fp3ht"]
+[ext_resource type="Texture2D" uid="uid://bv8dginnchvuc" path="res://Treasure Hunters/Pirate Treasure/Sprites/Golden Skull/08.png" id="8_fxdjo"]
+[ext_resource type="Texture2D" uid="uid://c4p86xlued4mf" path="res://Treasure Hunters/Pirate Treasure/Sprites/Skull Effect/01.png" id="9_w46hn"]
+[ext_resource type="Texture2D" uid="uid://c2m4nsw1nj4ut" path="res://Treasure Hunters/Pirate Treasure/Sprites/Skull Effect/02.png" id="10_hceu4"]
+[ext_resource type="Texture2D" uid="uid://ho1um4umm5r" path="res://Treasure Hunters/Pirate Treasure/Sprites/Skull Effect/03.png" id="11_s0ouw"]
+[ext_resource type="Texture2D" uid="uid://by32s7p3wo0ey" path="res://Treasure Hunters/Pirate Treasure/Sprites/Skull Effect/04.png" id="12_50g2f"]
+[ext_resource type="Texture2D" uid="uid://b0qleurqxm2mh" path="res://Treasure Hunters/Pirate Treasure/Sprites/Skull Effect/05.png" id="13_7squk"]
+[ext_resource type="AudioStream" uid="uid://d1s4r2n4uuqu5" path="res://SFX/impact-6291 (mp3cut.net).mp3" id="14_cr3im"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wh8xt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_o72nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mqkm3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6ne58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4f6dk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_8u1ce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_4fxav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fp3ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fxdjo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_w46hn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_hceu4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_s0ouw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_50g2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_7squk")
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"effect",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_708df"]
+radius = 7.07107
+
+[node name="Golden Skull" type="Area2D"]
+position = Vector2(306, 198)
+collision_layer = 16777216
+collision_mask = 256
+script = ExtResource("1_j6yfh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(70, -40)
+sprite_frames = SubResource("SpriteFrames_wh8xt")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(71, -35)
+shape = SubResource("CircleShape2D_708df")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_cr3im")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

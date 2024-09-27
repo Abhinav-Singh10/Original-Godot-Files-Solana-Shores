@@ -1,0 +1,40 @@
+[gd_scene load_steps=6 format=3 uid="uid://cq5gcv4ohbuk6"]
+
+[ext_resource type="Script" path="res://Scripts/title_manager.gd" id="1_pqvuo"]
+[ext_resource type="PackedScene" uid="uid://dbcvbn34aooyc" path="res://Scenes/game.tscn" id="2_h3m1r"]
+
+[sub_resource type="Theme" id="Theme_hbayb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_msdb7"]
+bg_color = Color(0.840914, 0.47755, 0.518059, 1)
+
+[sub_resource type="Theme" id="Theme_w071e"]
+
+[node name="Test Title" type="Control"]
+layout_mode = 3
+anchor_right = 0.245
+anchor_bottom = 0.24
+offset_right = -334.67
+offset_bottom = -184.32
+script = ExtResource("1_pqvuo")
+_game_scene = ExtResource("2_h3m1r")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1364.0
+offset_bottom = 763.0
+theme = SubResource("Theme_hbayb")
+theme_override_styles/panel = SubResource("StyleBoxFlat_msdb7")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 432.0
+offset_right = 856.0
+offset_bottom = 578.0
+theme = SubResource("Theme_w071e")
+theme_type_variation = &"FlatButton"
+theme_override_font_sizes/font_size = 34
+text = "Connect Wallet"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
